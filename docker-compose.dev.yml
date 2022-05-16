@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./:/usr/src/app
+      - /usr/scr/app/node_modules
+    # env_file:
+    #   - ./.env
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=development
+    command: yarn dev

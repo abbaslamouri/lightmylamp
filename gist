@@ -1,6 +1,14 @@
 
 docker-compose -f docker-compose.dev.yml up -d --build
 docker exec -it lightmylamp-backend-1 /bin/sh
+docker exec -it node-ambassador-backend-1 /bin/sh
+
+
+
+
+
+
+
 
 docker build -t api .
 
